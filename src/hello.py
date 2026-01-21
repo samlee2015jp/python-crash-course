@@ -25,20 +25,25 @@
 # motorcycles.append('honda')
 # print(motorcycles)
 
-motorcycles2 = []
-motorcycles2.append('honda')
-motorcycles2.append('yamaha')
-motorcycles2.append('suzuki')
-print(motorcycles2)
-# motorcycles2.insert(0, 'ducati')
+# motorcycles2 = []
+# motorcycles2.append('honda')
+# motorcycles2.append('yamaha')
+# motorcycles2.append('suzuki')
 # print(motorcycles2)
-motorcycles = motorcycles2.insert(2, 'error')
-print(motorcycles)
-print(motorcycles2)
-# del motorcycles2[-2]
+# # motorcycles2.insert(0, 'ducati')
+# # print(motorcycles2)
+# motorcycles = motorcycles2.insert(2, 'error')
+# print(motorcycles)
 # print(motorcycles2)
-motorcycles = motorcycles2.pop()
-print(motorcycles2)
-print(motorcycles)
-motorcycles2.remove('error')
-print(motorcycles2)
+# # del motorcycles2[-2]
+# # print(motorcycles2)
+# motorcycles = motorcycles2.pop()
+# print(motorcycles2)
+# print(motorcycles)
+# motorcycles2.remove('error')
+# print(motorcycles2)
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse=True)
+print(cars)
+print(len(cars))
