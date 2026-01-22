@@ -14,3 +14,10 @@ else:
 # The new position is the old position plus the increment.
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print(f"New position: {alien_0['x_position']}")
+
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points', 'No point value assigned.')
+print(point_value)
+
+for alien in alien_0.values():
+    print(alien)
