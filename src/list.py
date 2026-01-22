@@ -47,3 +47,5 @@ copy_list = fruits.copy()
 
 # 清空列表
 fruits.clear()
+print(fruits)
+print(copy_list)
