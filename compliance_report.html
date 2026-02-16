@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Compliance Review Report</title>
+    <style>
+        :root {
+            --critical: #d9534f; --warning: #f0ad4e; --pass: #5cb85c;
+            --bg: #f8f9fa; --text: #333;
+        }
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        
+        /* Header & Status */
+        .header { border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
+        .status-badge { padding: 8px 16px; border-radius: 20px; color: white; font-weight: bold; text-transform: uppercase; }
+        .bg-critical { background: var(--critical); }
+        .bg-warning { background: var(--warning); }
+        .bg-pass { background: var(--pass); }
+
+        /* Content Sections */
+        .section { margin-bottom: 30px; }
+        .section-title { font-size: 1.2em; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; border-left: 4px solid #004a99; padding-left: 10px; }
+        
+        /* Ad Content Display */
+        .ad-preview { background: #fdfdfe; border: 1px dashed #ccc; padding: 15px; border-radius: 4px; font-size: 1.1em; position: relative; }
+        .highlight-violation { background: rgba(217, 83, 79, 0.2); border-bottom: 2px solid var(--critical); font-weight: bold; }
+
+        /* Checklist Style */
+        .checklist { list-style: none; padding: 0; }
+        .checklist-item { display: flex; align-items: flex-start; margin-bottom: 8px; padding: 10px; background: #fffaf0; border-radius: 4px; border-left: 3px solid #f0ad4e; }
+        .checklist-item input { margin-right: 12px; margin-top: 5px; transform: scale(1.2); }
+
+        /* Legal Table */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #eee; }
+        th { background: #f4f4f4; font-size: 0.9em; }
+        
+        .action-btn { display: inline-block; padding: 10px 20px; background: #004a99; color: white; text-decoration: none; border-radius: 4px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1 style="margin:0; font-size: 1.5em;">AI広告審査レポート</h1>
+            <small style="color: #666;">ID: ADV-2026-0042 | 審査対象: FXプロモーション</small>
+        </div>
+        <div class="status-badge bg-critical">不備あり (FAIL)</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">審査対象コンテンツ</div>
+        <div class="ad-preview">
+            当社のAIアルゴリズムで<span class="highlight-violation">収益を最大化</span>しましょう！今なら口座開設で50,000円キャッシュバック。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">AI判定チェックリスト (関連規則より生成)</div>
+        <ul class="checklist">
+            <li class="checklist-item">
+                <input type="checkbox" checked>
+                <div><strong>断定的表現の禁止:</strong> 「最大化」という表現が投資家に確実な利益を誤認させる可能性がある。</div>
+            </li>
+            <li class="checklist-item">
+                <input type="checkbox">
+                <div><strong>打消し表示の欠如:</strong> 収益強調の近傍に「元本割れリスク」の記載が見当たらない。</div>
+            </li>
+            <li class="checklist-item">
+                <input type="checkbox">
+                <div><strong>景表法遵守:</strong> キャッシュバック条件の注釈（適用期間、対象者）が不足している。</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">詳細分析と法的根拠</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>違反カテゴリー</th>
+                    <th>法的根拠 / 規則番号</th>
+                    <th>リスク度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>断定的判断の提供</td>
+                    <td>金融商品取引法 第38条 第1号</td>
+                    <td style="color: var(--critical); font-weight: bold;">高 (High)</td>
+                </tr>
+                <tr>
+                    <td>誇大広告の禁止</td>
+                    <td>日本証券業協会 広告等に関する規則</td>
+                    <td style="color: var(--warning); font-weight: bold;">中 (Mid)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="section-title">修正推奨案 (Suggestion)</div>
+        <div style="background: #eef7ff; padding: 15px; border-radius: 4px; border-left: 4px solid #004a99;">
+            <strong>修正前:</strong> 収益を最大化しましょう！<br>
+            <strong>修正後:</strong> <span style="color: #004a99; font-weight: bold;">収益の向上をサポートします。</span><br>
+            <small>※必ず「将来の運用成果を保証するものではありません」という注釈を同サイズで追記してください。</small>
+        </div>
+    </div>
+
+    <a href="#" class="action-btn">審査結果を承認してJIRAへ送る</a>
+</div>
+
+</body>
+</html>
